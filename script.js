@@ -11,6 +11,11 @@ var arr = [];
 
 
 function salvar(){
+
+    if (localStorage.meuArr){             
+        arr = JSON.parse(localStorage.getItem('meuArr')); 
+    }
+
     var aux = new item(document.getElementById('hero_name').value, document.getElementById('hero_strenght').value);
     arr.push(aux);  
     arr.forEach(function (bora){
@@ -18,6 +23,7 @@ function salvar(){
     })  
     document.getElementById('hero_name').value = "";
     document.getElementById('hero_strenght').value = "";
+    localStorage.meuArr = JSON.stringify(arr);
 }
 
 
@@ -26,6 +32,10 @@ function carregar(){
     let resultDIV = document.getElementById('d');
     resultDIV.innerHTML = "";
 
+    if (localStorage.meuArr){             
+        arr = JSON.parse(localStorage.getItem('meuArr')); 
+    }
+
     arr.forEach(function(opa){
         var text = 'nome do herói: ' + opa.name + ' força: ' + opa.strenght;
         let p = document.createElement("p");
@@ -33,6 +43,11 @@ function carregar(){
         resultDIV.append(p);
 
     })
+}
+
+function excluir(){
+    arr = [];
+    localStorage.meuArr = JSON.stringify(arr);
 }
 
 

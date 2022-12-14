@@ -1,3 +1,5 @@
+// script
+
 class item {
     constructor(name, strenght) {
         this.name = name;

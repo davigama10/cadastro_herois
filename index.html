@@ -14,34 +14,55 @@
 <body>
 
     <main>
-        <div class="logos">
-            <a href="#">
-                <img src="assets/malphite_logo.jpg" alt="malphite">
-            </a>
-            <a href="#">
-                <img src="assets/maokai_logo.webp" alt="maokai">
-            </a>
-            <a href="#">
-                <img src="assets/thresh_logo.webp" alt="thresh">
-            </a>
+        
+        <div class="pai">
+
+            <div class="blocos12">
+
+                
+                <form class="form1">
+                    
+                <div class="logos">
+                    <a href="#">
+                        <img src="assets/malphite_logo.jpg" alt="malphite">
+                    </a>
+                    <a href="#">
+                        <img src="assets/maokai_logo.webp" alt="maokai">
+                    </a>
+                    <a href="#">
+                        <img src="assets/thresh_logo.webp" alt="thresh">
+                    </a>
+                </div>
+                
+                <h1>Heróis</h1>
+                <label for="name">
+                    <span>Nome do Herói</span>
+                    <input type="text" placeholder="nome do herói" id="hero_name">
+                </label>
+                <label for="strenght">
+                    <span>Força do Herói</span>
+                    <input type="text" placeholder="força do herói" id="hero_strenght">
+                </label>
+                <button type="button" onclick="salvar()">salvar herói</button>
+                <button type="button" onclick="carregar()">mostrar heróis</button>
+                <button type="button" onclick="excluir()">excluir heróis</button>
+            </form>
+            
+            <form class="form2">
+                <h2>Heróis:</h2>
+                <div id="saida">
+                </div>
+            </form>            
+        </div>
+            <div class="img_campeoes">
+                <a href="#">
+                    <img src="assets/todos1.jpg" alt="todos">
+                </a>
+            </div>
+
         </div>
         
-        <form>
-            <h1>Heróis</h1>
-            <label for="name">
-                <span>Nome do Herói</span>
-                <input type="text" placeholder="nome do herói" id="hero_name">
-            </label>
-            <label for="strenght">
-                <span>Força do Herói</span>
-                <input type="text" placeholder="força do herói" id="hero_strenght">
-            </label>
-            <button type="button" onclick="salvar()">salvar herói</button>
-            <button type="button" onclick="carregar()">mostrar heróis</button>
-            <button type="button" onclick="excluir()">excluir heróis</button>
-            <div id="d"></div>
-    
-        </form>
+        
 
     </main>
 

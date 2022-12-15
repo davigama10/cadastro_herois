@@ -24,12 +24,13 @@ function salvar(){
     document.getElementById('hero_name').value = "";
     document.getElementById('hero_strenght').value = "";
     localStorage.meuArr = JSON.stringify(arr);
+    document.getElementById('hero_name').focus();
 }
 
 
 function carregar(){
 
-    let resultDIV = document.getElementById('d');
+    let resultDIV = document.getElementById('saida');
     resultDIV.innerHTML = "";
 
     if (localStorage.meuArr){             
@@ -37,17 +38,21 @@ function carregar(){
     }
 
     arr.forEach(function(opa){
-        var text = 'nome do herói: ' + opa.name + ' força: ' + opa.strenght;
+        var text = 'herói: ' + opa.name + '<br> força: ' + opa.strenght;
+        console.log(opa.strenght);
         let p = document.createElement("p");
         p.innerHTML = text;
         resultDIV.append(p);
 
     })
+
+    document.getElementById('hero_name').focus();
 }
 
 function excluir(){
     arr = [];
     localStorage.meuArr = JSON.stringify(arr);
+    document.getElementById('hero_name').focus();
 }
 
 
